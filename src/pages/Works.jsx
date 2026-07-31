@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useLang } from '../i18n.jsx'
 import { JAPAN_PATH } from '../assets/cases/japanPath.js'
 import { TOKYO_VB, TOKYO_WARDS } from '../assets/cases/tokyoWards.js'
@@ -262,6 +262,13 @@ export default function Works() {
               </div>
             </>
           )}
+        </div>
+
+        {/* Insights への導流 */}
+        <div className="mt-10 text-center">
+          <Link to="/insights" className="text-sm font-semibold text-red-dark hover:underline">
+            {t.insights.worksLink}
+          </Link>
         </div>
       </section>
     </>

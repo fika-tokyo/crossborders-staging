@@ -12,7 +12,19 @@
   ⚠️ `AppData` 配下では Vite dev サーバーが壊れる（MSIX 仮想化）。必ず `projects` 配下で動かす。
 - **技術:** React + Vite + Tailwind CSS v4 + React Router、4言語（ja 日本語 / tw 繁體中文 / zh 简体中文 / en English、初期=ja）。
 
-## 更新の流れ / 如何更新（自动部署）
+## 更新の流れ / 如何更新（staging → 本番）
+
+**プレビュー(staging):** https://fika-tokyo.github.io/crossborders-staging/
+（リポジトリ `fika-tokyo/crossborders-staging`、ローカル `C:\Users\kdili\projects\crossborders-staging`）
+
+1. 修正はまず **staging リポジトリ** に push → プレビューURLでユーザー/上司が確認
+2. 承認後、本番リポジトリ（このリポジトリ）に同じ変更を push → crossborders.tokyo に公開
+3. 軽微な修正はローカル `npm run dev` 確認 → 直接本番 push でも可（ユーザーの指示に従う）
+
+⚠️ staging→本番へ同期するとき、**次の3点は staging 専用なので本番に持ち込まない**:
+`.github/workflows/deploy.yml`（VITE_BASE と VITE_STAGING が異なる）/
+`public/robots.txt`（staging は Disallow: /）/ CNAME・sitemap.xml（staging には無い）。
+プレビューバッジは `VITE_STAGING` ビルドフラグ制御なのでコード共通・本番では非表示。
 
 コードを編集 → `git push`（main）→ GitHub Actions が自動ビルドして
 GitHub Pages に公開。手動アップロード不要。約1〜2分で反映。

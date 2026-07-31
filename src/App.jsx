@@ -1,6 +1,7 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLang } from './i18n.jsx'
+import { getArticle, articleField } from './insights/index.js'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -8,7 +9,8 @@ import About from './pages/About.jsx'
 import Value from './pages/Value.jsx'
 import Works from './pages/Works.jsx'
 import WorkRegion from './pages/WorkRegion.jsx'
-import Partnership from './pages/Partnership.jsx'
+import Insights from './pages/Insights.jsx'
+import InsightArticle from './pages/InsightArticle.jsx'
 import Contact from './pages/Contact.jsx'
 import ThankYou from './pages/ThankYou.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -23,16 +25,25 @@ function ScrollToTop() {
 
 function PageTitle() {
   const { pathname } = useLocation()
-  const { t } = useLang()
+  const { t, lang } = useLang()
   useEffect(() => {
     const base = 'CROSSBORDERS'
     if (pathname === '/') {
       document.title = 'CROSSBORDERS — Cross Borders, Create Value.'
       return
     }
+    // 記事詳細は記事タイトルを使う
+    const m = pathname.match(/^\/insights\/([^/]+)/)
+    if (m) {
+      const a = getArticle(m[1])
+      if (a) {
+        document.title = `${articleField(a, 'title', lang)} | ${base}`
+        return
+      }
+    }
     const item = t.nav.find((n) => n.to !== '/' && pathname.startsWith(n.to))
     document.title = item ? `${item.label} | ${base}` : base
-  }, [pathname, t])
+  }, [pathname, t, lang])
   return null
 }
 
@@ -55,7 +66,10 @@ export default function App() {
           <Route path="/value" element={<Value />} />
           <Route path="/works" element={<Works />} />
           <Route path="/works/:region" element={<WorkRegion />} />
-          <Route path="/partnership" element={<Partnership />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<InsightArticle />} />
+          {/* Partnership は Contact に統合。既に配布済みのリンクのためリダイレクトを残す */}
+          <Route path="/partnership" element={<Navigate to="/contact" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />

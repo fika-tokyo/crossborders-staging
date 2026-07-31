@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n.jsx'
+import { latestArticle, articleField } from '../insights/index.js'
 import { StepIcon } from '../components/StepIcons.jsx'
 import heroBg from '../assets/hero-tokyo.jpg'
 import imgAbout from '../assets/cross-partner.jpg'
@@ -8,7 +9,7 @@ import imgValue from '../assets/cross-value.jpg'
 import imgPartner from '../assets/cross-borders.jpg'
 
 export default function Home() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const { hero, valueChain, ui } = t
 
   const portals = [
@@ -26,7 +27,7 @@ export default function Home() {
           src={heroBg}
           alt=""
           aria-hidden="true"
-          fetchPriority="high"
+          fetchpriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* Light overlay — heavier on the right (where the text sits) so the
@@ -127,6 +128,31 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ---------------- Latest insight ---------------- */}
+      {(() => {
+        const latest = latestArticle()
+        if (!latest) return null
+        return (
+          <section className="mx-auto max-w-6xl px-6 pb-20">
+            <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">{t.insights.latestTitle}</h2>
+            <Link
+              to={`/insights/${latest.slug}`}
+              className="mt-6 block rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-0.5 hover:border-red hover:shadow-md"
+            >
+              <div className="flex flex-wrap items-center gap-3 text-sm">
+                <span className="text-ink-soft">{latest.date}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${latest.status === 'sold' ? 'bg-cloud text-ink-soft' : 'bg-red/10 text-red-dark'}`}>
+                  {latest.status === 'sold' ? t.insights.statusSold : t.insights.statusAvailable}
+                </span>
+              </div>
+              <h3 className="mt-3 text-xl font-bold leading-snug text-ink">{articleField(latest, 'title', lang)}</h3>
+              <p className="mt-3 leading-relaxed text-ink-soft">{articleField(latest, 'excerpt', lang)}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-red-dark">{t.insights.readMore}</span>
+            </Link>
+          </section>
+        )
+      })()}
 
     </>
   )
