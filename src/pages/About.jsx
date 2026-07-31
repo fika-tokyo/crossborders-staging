@@ -27,21 +27,58 @@ export default function About() {
         </div>
       </section>
 
-      {/* Five borders */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
-        <div className="space-y-px overflow-hidden rounded-2xl border border-line">
-          {borders.map((b) => {
-            const Icon = borderIcons[b.key]
-            return (
-              <div key={b.key} className="flex gap-6 bg-white p-7 transition hover:bg-mist">
-                {Icon && <Icon className="h-7 w-7 shrink-0 text-red" strokeWidth={1.75} />}
-                <div>
-                  <h3 className="text-lg font-semibold uppercase text-ink">{b.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{b.body}</p>
+      {/* Five borders — 「越境」の帯:赤いラインが5本の破線(境界)を貫く */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="relative overflow-hidden rounded-2xl bg-mist p-6 md:p-10">
+          {/* Desktop: 横向きの赤線+右端矢印 */}
+          <div className="absolute left-0 right-0 top-16 hidden md:block">
+            <div className="h-0.5 w-full bg-red" />
+            <span
+              aria-hidden="true"
+              className="absolute right-2 top-1/2 h-0 w-0 -translate-y-1/2 border-y-[5px] border-l-[9px] border-y-transparent border-l-red"
+            />
+          </div>
+
+          {/* Desktop: 5列(列間の破線=境界) */}
+          <div className="hidden md:grid md:grid-cols-5">
+            {borders.map((b, i) => {
+              const Icon = borderIcons[b.key]
+              return (
+                <div
+                  key={b.key}
+                  className={`px-4 text-center ${i > 0 ? 'border-l-[1.5px] border-dashed border-line' : ''}`}
+                >
+                  <div className="relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-red bg-white">
+                    {Icon && <Icon className="h-5 w-5 text-red" strokeWidth={1.75} />}
+                  </div>
+                  <h3 className="mt-4 font-semibold text-ink">{b.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-soft">{b.body}</p>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
+
+          {/* Mobile: 縦の赤線に円が連なる(タイムラインと同じ基調) */}
+          <div className="relative md:hidden">
+            <div className="absolute bottom-5 left-6 top-5 w-0.5 bg-red" aria-hidden="true" />
+            {borders.map((b, i) => {
+              const Icon = borderIcons[b.key]
+              return (
+                <div
+                  key={b.key}
+                  className={`relative flex gap-4 py-5 ${i > 0 ? 'border-t-[1.5px] border-dashed border-line' : ''}`}
+                >
+                  <div className="relative z-10 ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-red bg-white">
+                    {Icon && <Icon className="h-4 w-4 text-red" strokeWidth={1.75} />}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-ink">{b.title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-ink-soft">{b.body}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 

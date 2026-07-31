@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n.jsx'
 
@@ -55,6 +55,22 @@ export default function Value() {
   const { valueChain, matrix, strengths, faq, contactTopics, ui } = t
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
+  /* 現在表示中のセクションを追跡して目次をハイライト */
+  const [activeId, setActiveId] = useState(VALUE_TOC[0].id)
+  useEffect(() => {
+    const onScroll = () => {
+      let cur = VALUE_TOC[0].id
+      for (const s of VALUE_TOC) {
+        const el = document.getElementById(s.id)
+        if (el && el.getBoundingClientRect().top <= 150) cur = s.id
+      }
+      setActiveId(cur)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <>
       <section className="bg-mist py-20">
@@ -69,12 +85,14 @@ export default function Value() {
 
       {/* Sticky table of contents */}
       <nav className="sticky top-16 z-30 border-y border-line bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-6 py-3.5">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-10 gap-y-2 px-6 py-4">
           {VALUE_TOC.map((s) => (
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className="text-sm font-semibold text-ink-soft transition hover:text-red-dark"
+              className={`text-base font-semibold transition ${
+                activeId === s.id ? 'text-red-dark' : 'text-ink-soft hover:text-red-dark'
+              }`}
             >
               {s[lang] || s.ja}
             </button>
