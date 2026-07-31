@@ -1,33 +1,27 @@
-// Insights(市場レポート)記事のメタデータ。
-// 正文は同ディレクトリの markdown を raw import。tw/zh/en 版は
-// shinjuku-gyoen-2026-07.zh.md 等を追加して content に挂載する。
+// Insights(市場レポート)— フロントエンド用の記事データ。
+// メタデータは meta.js(プリレンダ脚本と共用)。ここでは Vite の ?raw / 画像 import で
+// 正文と写真を挂載する。tw/zh/en 版は .tw.md 等を追加して CONTENT に足す。
+import { ARTICLES_META } from './meta.js'
 import jaShinjukuGyoen from './shinjuku-gyoen-2026-07.ja.md?raw'
 import imgShinjukuRoom from './shinjuku-room.jpg'
 import imgShinjukuBuilding from './shinjuku-building.jpg'
 
-export const ARTICLES = [
-  {
-    slug: 'shinjuku-gyoen-2026-07',
-    date: '2026-07-31',                  // 情報公開日(列表排序用)
-    status: 'available',                 // 'available' | 'sold'
-    contactTopic: 'Investment inquiry',  // contactTopics 対応キー(CTA 預選用)
-    image: imgShinjukuRoom,              // 一覧カード・最新レポートのサムネイル
-    heroImage: imgShinjukuBuilding,      // 記事冒頭のビル外観写真
-    title: {
-      ja: '民泊許可だけを持つ新宿の一棟ビルと、封印されたもう半分の収益',
-      tw: '',
-      zh: '',
-      en: '',
-    },
-    excerpt: {
-      ja: '新宿三丁目駅徒歩4分・RC造6階建ての一棟ビル。同じ建物で、民泊180日営業と旅館業365日営業では収益率が約2倍違う——その理由を、供給・制度・需要の3つのデータから読み解きます。',
-      tw: '',
-      zh: '',
-      en: '',
-    },
-    content: { ja: jaShinjukuGyoen },
+const CONTENT = {
+  'shinjuku-gyoen-2026-07': { ja: jaShinjukuGyoen },
+}
+
+const IMAGES = {
+  'shinjuku-gyoen-2026-07': {
+    image: imgShinjukuRoom,       // 一覧カード・最新レポートのサムネイル
+    heroImage: imgShinjukuBuilding, // 記事冒頭のビル外観写真
   },
-]
+}
+
+export const ARTICLES = ARTICLES_META.map((m) => ({
+  ...m,
+  content: CONTENT[m.slug] || {},
+  ...(IMAGES[m.slug] || {}),
+}))
 
 export function getArticle(slug) {
   return ARTICLES.find((a) => a.slug === slug) || null
