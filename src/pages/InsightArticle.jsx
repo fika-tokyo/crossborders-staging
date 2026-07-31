@@ -79,12 +79,12 @@ export default function InsightArticle() {
           <p className="mb-8 rounded-xl bg-mist px-5 py-3 text-sm text-ink-soft">{ins.jaOnlyNote}</p>
         )}
 
-        {/* ビル外観写真 */}
+        {/* ビル外観写真 — 縦位置写真をトリミングせず全体を表示 */}
         {article.heroImage && (
           <img
             src={article.heroImage}
             alt=""
-            className="mb-10 max-h-[520px] w-full rounded-2xl object-cover object-center"
+            className="mx-auto mb-10 max-h-[640px] w-auto rounded-2xl"
           />
         )}
 
