@@ -63,8 +63,11 @@ git add -A && git commit -m "..." && git push
 - **/works/:region** 地域詳細: 東京は23区の放射図（区ごとに代表地標の写真へ線が発散）+ 事例カード。他地域は事例カード。
 - **/insights** 市場レポート: 記事一覧。**/insights/:slug** で記事詳細(markdown を
   react-markdown+remark-gfm+rehype-raw で描画。CJK 対応のため太字は `<strong>` タグ)。
-  記事データは `src/insights/index.js` の ARTICLES(正文は同ディレクトリの .md を ?raw import)。
-  〈ご記入ください〉プレースホルダは業主記入待ち・削除禁止。成約時は status を 'sold' に。
+  記事メタデータは `src/insights/meta.js`(フロントとプリレンダ脚本の共用ソース)、
+  正文 md・写真の挂載は `src/insights/index.js`。
+  〈ご記入ください〉プレースホルダは業主記入待ち・削除禁止。成約時は meta.js の status を 'sold' に。
+  **SEO:** build 時に `scripts/prerender-insights.mjs` が /insights 系を実 HTML 化し、
+  sitemap.xml / robots.txt も生成(public/ には置かない)。staging ビルドは sitemap/robots を生成しない。
 - **/partnership** は /contact へリダイレクト(協働カードは Contact に統合済み)
 - **/contact** お問い合わせ: 協働カード(クリックで主題預選+スクロール)+ 入力検証つきフォーム → /thank-you
 - フッター: CTA バナー + 連絡先（海の写真背景。/contact・/thank-you では CTA 非表示）

@@ -3,11 +3,19 @@
 // 正文と写真を挂載する。tw/zh/en 版は .tw.md 等を追加して CONTENT に足す。
 import { ARTICLES_META } from './meta.js'
 import jaShinjukuGyoen from './shinjuku-gyoen-2026-07.ja.md?raw'
+import twShinjukuGyoen from './shinjuku-gyoen-2026-07.tw.md?raw'
+import zhShinjukuGyoen from './shinjuku-gyoen-2026-07.zh.md?raw'
+import enShinjukuGyoen from './shinjuku-gyoen-2026-07.en.md?raw'
 import imgShinjukuRoom from './shinjuku-room.jpg'
 import imgShinjukuBuilding from './shinjuku-building.jpg'
 
 const CONTENT = {
-  'shinjuku-gyoen-2026-07': { ja: jaShinjukuGyoen },
+  'shinjuku-gyoen-2026-07': {
+    ja: jaShinjukuGyoen,
+    tw: twShinjukuGyoen,
+    zh: zhShinjukuGyoen,
+    en: enShinjukuGyoen,
+  },
 }
 
 const IMAGES = {
