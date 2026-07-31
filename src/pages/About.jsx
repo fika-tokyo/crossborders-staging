@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Languages, Globe, Layers, Clock, Building2 } from 'lucide-react'
 import { useLang } from '../i18n.jsx'
 
@@ -11,7 +12,7 @@ const borderIcons = {
 
 export default function About() {
   const { t } = useLang()
-  const { borders, journey, metrics, ui } = t
+  const { borders, journey, metrics, partnership, ui } = t
 
   return (
     <>
@@ -98,6 +99,41 @@ export default function About() {
           <p className="journey-closing mx-auto mt-14 max-w-3xl whitespace-pre-line text-center text-lg font-medium leading-relaxed text-ink md:text-xl">
             {journey.closing}
           </p>
+        </div>
+      </section>
+
+      {/* Partnership — 三つの協働のかたち(クリックで Contact へ・主題預選) */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-dark">{ui.aboutEyebrow3}</p>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink md:text-4xl">{ui.partnershipTitle}</h2>
+        <p className="mt-3 text-ink-soft">{ui.partnershipSubtitle}</p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {partnership.types.map((type) => (
+            <div key={type.title} className="flex flex-col rounded-2xl border border-line bg-white p-8 transition hover:border-red hover:shadow-lg">
+              <h3 className="text-xl font-bold text-ink">{type.title}</h3>
+              {type.en && <p className="text-xs font-semibold uppercase tracking-wider text-red-dark">{type.en}</p>}
+              <p className="mt-4 inline-block self-start rounded-full bg-cloud px-3 py-1 text-xs font-medium text-ink-soft">
+                {ui.targetLabel}{type.target}
+              </p>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed">
+                <div>
+                  <p className="font-semibold text-ink">{ui.serviceLabel}</p>
+                  <p className="mt-1 text-ink-soft">{type.service}</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-ink">{ui.valueLabel}</p>
+                  <p className="mt-1 text-ink-soft">{type.value}</p>
+                </div>
+              </div>
+              <Link
+                to="/contact"
+                state={{ topic: type.title }}
+                className="mt-6 self-start text-sm font-semibold text-red-dark hover:underline"
+              >
+                {ui.discussThis}
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
     </>

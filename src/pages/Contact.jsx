@@ -11,7 +11,7 @@ export default function Contact() {
   const navigate = useNavigate()
   const { state } = useLocation()
   const { t } = useLang()
-  const { site, contactTopics, partnership, ui } = t
+  const { site, contactTopics, ui } = t
 
   // Preselect the topic when the visitor arrived from a specific CTA.
   const initialTopic = contactTopics.includes(state?.topic) ? state.topic : contactTopics[0]
@@ -76,15 +76,6 @@ export default function Contact() {
     }
   }
 
-  /* 協働カード:クリックで主題を預選し、フォームへスクロール(旧 Partnership の機構を流用) */
-  function pickTopic(topic) {
-    update('topic', topic)
-    // setState 直後の再レンダーで smooth スクロールが中断されるため、1フレーム遅らせる
-    setTimeout(() => {
-      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 60)
-  }
-
   const fieldClass = (field) =>
     `w-full rounded-xl border bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-red ${
       errors[field] ? 'border-red-400' : 'border-line'
@@ -96,40 +87,6 @@ export default function Contact() {
         {/* Header */}
         <h1 className="text-4xl font-bold tracking-tight text-ink md:text-5xl">{ui.contactTitle}</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{ui.contactIntro}</p>
-
-        {/* Partnership cards(旧 /partnership から統合) */}
-        <div className="mt-14">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">{ui.partnershipTitle}</h2>
-          <p className="mt-2 text-ink-soft">{ui.partnershipSubtitle}</p>
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            {partnership.types.map((type) => (
-              <div key={type.title} className="flex flex-col rounded-2xl border border-line bg-white p-8 transition hover:border-red hover:shadow-lg">
-                <h3 className="text-xl font-bold text-ink">{type.title}</h3>
-                {type.en && <p className="text-xs font-semibold uppercase tracking-wider text-red-dark">{type.en}</p>}
-                <p className="mt-4 inline-block self-start rounded-full bg-cloud px-3 py-1 text-xs font-medium text-ink-soft">
-                  {ui.targetLabel}{type.target}
-                </p>
-                <div className="mt-5 space-y-4 text-sm leading-relaxed">
-                  <div>
-                    <p className="font-semibold text-ink">{ui.serviceLabel}</p>
-                    <p className="mt-1 text-ink-soft">{type.service}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-ink">{ui.valueLabel}</p>
-                    <p className="mt-1 text-ink-soft">{type.value}</p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => pickTopic(type.title)}
-                  className="mt-6 self-start text-sm font-semibold text-red-dark hover:underline"
-                >
-                  {ui.discussThis}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Info + form */}
         <div className="mt-16 grid gap-12 md:grid-cols-2">

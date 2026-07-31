@@ -211,7 +211,7 @@ export default function Works() {
   const [cat, setCat] = useState('estate')
 
   const tabCls = (on) =>
-    `rounded-full px-4 py-1.5 text-sm font-semibold transition ${on ? 'bg-white text-ink shadow-sm' : 'text-ink-soft hover:text-ink'}`
+    `rounded-full px-8 py-2.5 text-base font-semibold transition ${on ? 'bg-white text-ink shadow-sm' : 'text-ink-soft hover:text-ink'}`
 
   return (
     <>
@@ -225,9 +225,11 @@ export default function Works() {
 
       <section className="mx-auto max-w-5xl px-6 py-16">
         {/* カテゴリ切替:不動産 / ホテル */}
-        <div className="mb-6 inline-flex rounded-full bg-mist p-1">
+        <div className="mb-8 flex justify-center">
+        <div className="inline-flex rounded-full bg-mist p-1.5">
           <button className={tabCls(cat === 'estate')} onClick={() => setCat('estate')}>{tr(UI.tabEstate, lang)}</button>
           <button className={tabCls(cat === 'hotel')} onClick={() => setCat('hotel')}>{tr(UI.tabHotel, lang)}</button>
+        </div>
         </div>
 
         <div className="rounded-2xl border border-line bg-white p-6">
