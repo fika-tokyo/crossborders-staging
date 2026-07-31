@@ -138,17 +138,29 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">{t.insights.latestTitle}</h2>
             <Link
               to={`/insights/${latest.slug}`}
-              className="mt-6 block rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-0.5 hover:border-red hover:shadow-md"
+              className="group mt-6 block overflow-hidden rounded-2xl border border-line bg-white transition hover:-translate-y-0.5 hover:border-red hover:shadow-md md:flex"
             >
-              <div className="flex flex-wrap items-center gap-3 text-sm">
-                <span className="text-ink-soft">{latest.date}</span>
-                <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${latest.status === 'sold' ? 'bg-cloud text-ink-soft' : 'bg-red/10 text-red-dark'}`}>
-                  {latest.status === 'sold' ? t.insights.statusSold : t.insights.statusAvailable}
-                </span>
+              {latest.image && (
+                <div className="relative aspect-[4/3] overflow-hidden md:aspect-auto md:w-80 md:shrink-0">
+                  <img
+                    src={latest.image}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-7">
+                <div className="flex flex-wrap items-center gap-3 text-sm">
+                  <span className="text-ink-soft">{latest.date}</span>
+                  <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${latest.status === 'sold' ? 'bg-cloud text-ink-soft' : 'bg-red/10 text-red-dark'}`}>
+                    {latest.status === 'sold' ? t.insights.statusSold : t.insights.statusAvailable}
+                  </span>
+                </div>
+                <h3 className="mt-3 text-xl font-bold leading-snug text-ink">{articleField(latest, 'title', lang)}</h3>
+                <p className="mt-3 leading-relaxed text-ink-soft">{articleField(latest, 'excerpt', lang)}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-red-dark">{t.insights.readMore}</span>
               </div>
-              <h3 className="mt-3 text-xl font-bold leading-snug text-ink">{articleField(latest, 'title', lang)}</h3>
-              <p className="mt-3 leading-relaxed text-ink-soft">{articleField(latest, 'excerpt', lang)}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-red-dark">{t.insights.readMore}</span>
             </Link>
           </section>
         )

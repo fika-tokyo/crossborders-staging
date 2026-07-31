@@ -2,6 +2,8 @@
 // 正文は同ディレクトリの markdown を raw import。tw/zh/en 版は
 // shinjuku-gyoen-2026-07.zh.md 等を追加して content に挂載する。
 import jaShinjukuGyoen from './shinjuku-gyoen-2026-07.ja.md?raw'
+import imgShinjukuRoom from './shinjuku-room.jpg'
+import imgShinjukuBuilding from './shinjuku-building.jpg'
 
 export const ARTICLES = [
   {
@@ -9,6 +11,8 @@ export const ARTICLES = [
     date: '2026-07-31',                  // 情報公開日(列表排序用)
     status: 'available',                 // 'available' | 'sold'
     contactTopic: 'Investment inquiry',  // contactTopics 対応キー(CTA 預選用)
+    image: imgShinjukuRoom,              // 一覧カード・最新レポートのサムネイル
+    heroImage: imgShinjukuBuilding,      // 記事冒頭のビル外観写真
     title: {
       ja: '民泊許可だけを持つ新宿の一棟ビルと、封印されたもう半分の収益',
       tw: '',

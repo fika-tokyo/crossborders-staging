@@ -16,22 +16,18 @@ export default function About() {
 
   return (
     <>
-      {/* Brand philosophy */}
-      <section className="bg-mist py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-dark">{ui.aboutEyebrow1}</p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-ink md:text-5xl">
-            {ui.aboutTitle1}
-          </h1>
-          <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-ink-soft">{ui.aboutIntro1}</p>
-        </div>
-      </section>
-
-      {/* Five borders — 「越境」の帯:赤いラインが5本の破線(境界)を貫く */}
+      {/* Brand philosophy + five borders — 一つの白い帯にまとめる(02 OUR JOURNEY と同じ構成) */}
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="relative overflow-hidden rounded-2xl bg-mist p-6 md:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-dark">{ui.aboutEyebrow1}</p>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight text-ink md:text-5xl">
+          {ui.aboutTitle1}
+        </h1>
+        <p className="mt-6 max-w-4xl whitespace-pre-line text-lg leading-relaxed text-ink-soft">{ui.aboutIntro1}</p>
+
+        {/* 「越境」の帯:赤いラインが5本の破線(境界)を貫く */}
+        <div className="relative mt-14">
           {/* Desktop: 横向きの赤線+右端矢印 */}
-          <div className="absolute left-0 right-0 top-16 hidden md:block">
+          <div className="absolute left-0 right-0 top-[23px] hidden md:block">
             <div className="h-0.5 w-full bg-red" />
             <span
               aria-hidden="true"

@@ -79,6 +79,15 @@ export default function InsightArticle() {
           <p className="mb-8 rounded-xl bg-mist px-5 py-3 text-sm text-ink-soft">{ins.jaOnlyNote}</p>
         )}
 
+        {/* ビル外観写真 */}
+        {article.heroImage && (
+          <img
+            src={article.heroImage}
+            alt=""
+            className="mb-10 max-h-[520px] w-full rounded-2xl object-cover object-center"
+          />
+        )}
+
         <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={mdComponents}>
           {content}
         </ReactMarkdown>
