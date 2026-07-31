@@ -25,7 +25,7 @@ const ja = {
     taglineEn: `Cross Borders, Create Value.`,
     email: 'contact@crossborders.tokyo',
     phone: '050-1722-7286',
-    address: `東京都 目黒区`,
+    address: `〒153-0051 東京都目黒区上目黒4-41-8 2F`,
   },
   nav: [
     { label: `ホーム`, to: '/' },
@@ -88,13 +88,20 @@ const ja = {
     { key: 'industry', title: `業界の境界`, body: `圧倒的に透明でクリーンな取引により、日本の不動産業界が抱える旧来の「不透明」なイメージを打破する。` },
   ],
   journey: {
-    intro: `CROSSBORDERS は、民泊運営から歩みを始めました。現場で積み上げた運営の実績を礎に、いまは越境不動産の資産価値創造に注力しています。`,
+    intro: `民泊運営で培った現場力を礎に、無人ホテル運営へ、そして宅建業免許の取得により、購入〜運営〜売却の全工程を自社で完結できる体制へと進化してきました。`,
+    subEn: 'From vacation-rental to staffless hotels & full-cycle real estate',
     milestones: [
-      { year: '2014', title: `民泊運営事業を開始` },
-      { year: '2016', title: `株式会社クロスボーダーズ設立。麻布十番の一棟物件の運営を開始` },
-      { year: '2018', title: `貸しスペース（会議・イベント）事業を開始` },
-      { year: '2025', title: `宅地建物取引業の登録を取得` },
-      { year: '2026', title: `ブランドを刷新し、越境不動産の資産価値創造に注力` },
+      { year: '2014', title: `民泊運営を開始` },
+      { year: '2016', title: `会社設立
+麻布十番で運営開始` },
+      { year: '2018', title: `貸しスペース
+事業を開始` },
+      { year: '2024', title: `無人ホテル開業
+文京区・築古ビル再生`, hot: true },
+      { year: '2025', title: `宅建業の登録取得
+全工程を自社で完結` },
+      { year: '2026', title: `江東区で無人ホテル開業
+ブランド刷新・越境不動産へ`, hot: true },
     ],
     closing: `長年にわたる民泊運営の経験が私たちに教えてくれたのは、\nどれほど条件の異なる物件であっても、その価値を最大限に引き出せるということです。`,
   },
@@ -179,7 +186,7 @@ const ja = {
     valueTeaserTitle: `資産ライフサイクル全体の価値マネジメント`, valueTeaserSubtitle: `Discover から Exit まで、お客様の歩む一歩一歩に寄り添う——それが事業における「Cross the Borders」の本当の意味です。`, valueTeaserLink: `バリューチェーン全体を見る →`,
     homeCtaTitle: `ともに、新たな境界へ`, homeCtaSubtitle: `土地オーナー様、投資家様、そしてパートナーシップをご検討中の方まで、まずはお気軽にご相談ください。`, homeCtaButton: `お問い合わせ`,
     aboutEyebrow1: `01 · ブランド哲学`, aboutTitle1: `CROSSBORDERS の意味`, aboutIntro1: `"Cross the Borders" ——境界を越え、新たな価値を。\n私たちの社名は単なる名称ではなく、一つの確固たる思想です。\n現在の日本の不動産業界は、いまなお五つの見えない「境界」によって隔てられていると、私たちは捉えています。`,
-    aboutEyebrow2: `02 · 私たちの歩み`, aboutTitle2: `CROSSBORDERS のこれまで`,
+    aboutEyebrow2: `02 · OUR JOURNEY`, aboutTitle2: `私たちの歩み — 民泊から、無人ホテル、そして不動産の全工程へ`,
     valueEyebrow: `03 · 私たちの価値創造`, valueTitle: `資産ライフサイクル全体の価値マネジメント`, valueIntro: `従来の不動産会社が行うのは「売買仲介」だけ。私たちはすべてのサービスを、バラバラのメニューではなく一本のバリューチェーンに統合します。`,
     matrixTitle: `私たちの差別化`, matrixSubtitle: `不動産会社、運営会社、コンサルティング会社は数あれど、この三つを兼ね備える会社はごくわずかです。`, matrixCapHeader: `能力`,
     strengthsTitle: `四つの中核的な強み`, valueCtaButton: `ご要望を相談する`,
@@ -208,7 +215,7 @@ const tw = {
     taglineEn: `Cross Borders, Create Value.`,
     email: 'contact@crossborders.tokyo',
     phone: '050-1722-7286',
-    address: '東京都 目黑區',
+    address: '〒153-0051 東京都目黑區上目黑4-41-8 2F',
   },
   nav: [
     { label: `首頁`, to: '/' },
@@ -271,13 +278,20 @@ const tw = {
     { key: 'industry', title: `行業的邊界`, body: `以徹底透明、乾淨的交易，打破日本不動產行業舊有的「不透明」印象。` },
   ],
   journey: {
-    intro: `CROSSBORDERS 從民泊運營起步。以現場積累的運營實績為根基，如今專注於跨境不動產的資產價值創造。`,
+    intro: `以民泊運營累積的現場實力為基礎，邁向無人酒店運營；並透過取得宅建業執照，進化為可自社完成購入〜運營〜出售全流程的體制。`,
+    subEn: 'From vacation-rental to staffless hotels & full-cycle real estate',
     milestones: [
-      { year: '2014', title: `民泊（住宿）運營事業起步` },
-      { year: '2016', title: `株式會社 CROSSBORDERS 成立；麻布十番一棟物件運營開始` },
-      { year: '2018', title: `拓展貸し空間（會議·活動空間）事業` },
-      { year: '2025', title: `取得日本「宅地建物取引業」登入（不動產交易牌照）` },
-      { year: '2026', title: `品牌煥新，聚焦跨境不動產資產價值創造` },
+      { year: '2014', title: `開始民泊運營` },
+      { year: '2016', title: `公司成立
+麻布十番開始運營` },
+      { year: '2018', title: `開始共享空間
+(會議·活動)事業` },
+      { year: '2024', title: `無人酒店開業
+文京區·老樓再生`, hot: true },
+      { year: '2025', title: `取得宅建業登錄
+全流程自社完結` },
+      { year: '2026', title: `江東區無人酒店開業
+品牌煥新·跨境不動產`, hot: true },
     ],
     closing: `多年的民宿運營經驗讓我們懂得：無論是多麼不同的物件，我們都能把它的價值最大化。`,
   },
@@ -362,7 +376,7 @@ const tw = {
     valueTeaserTitle: `資產生命週期的全程價值管理`, valueTeaserSubtitle: `從 Discover 到 Exit，我們陪伴客戶走完每一步——這就是「Cross the Borders」在業務層面的真正含義。`, valueTeaserLink: `檢視完整價值鏈 →`,
     homeCtaTitle: `跟我們一起，跨越邊界，邁向未來`, homeCtaSubtitle: `無論您是土地業主、投資人，還是正在考慮合作的夥伴，歡迎隨時與我們聯絡。`, homeCtaButton: `聯絡我們`,
     aboutEyebrow1: `01 · 品牌哲學`, aboutTitle1: `CROSSBORDERS 的含義`, aboutIntro1: `"Cross the Borders" ——跨越邊界，創造新的價值。\n我們的公司名不僅是名稱，更是一種堅定的理念。我們認為，如今的日本不動產行業，依然被五道無形的「邊界」所阻隔。`,
-    aboutEyebrow2: `02 · 我們的歷程`, aboutTitle2: `CROSSBORDERS 一路走來`,
+    aboutEyebrow2: `02 · OUR JOURNEY`, aboutTitle2: `我們的歷程 — 從民泊、到無人酒店、再到不動產全流程`,
     valueEyebrow: `03 · 我們如何創造價值`, valueTitle: `資產生命週期的全程價值管理`, valueIntro: `傳統不動產公司只做「買賣中介」。我們把所有服務整合成一條完整的價值鏈，而不是零散的服務專案。`,
     matrixTitle: `我們的差別化`, matrixSubtitle: `市場上不乏各類公司，但能把不動產、運營、諮詢三者結合的，極少。`, matrixCapHeader: `能力`,
     strengthsTitle: `四大核心強項`, valueCtaButton: `洽談合作`,
@@ -390,7 +404,7 @@ const zh = {
     taglineEn: `Cross Borders, Create Value.`,
     email: 'contact@crossborders.tokyo',
     phone: '050-1722-7286',
-    address: '东京都 目黑区',
+    address: '〒153-0051 东京都目黑区上目黑4-41-8 2F',
   },
   nav: [
     { label: `首页`, to: '/' },
@@ -453,13 +467,20 @@ const zh = {
     { key: 'industry', title: `行业的边界`, body: `以彻底透明、干净的交易，打破日本不动产行业旧有的「不透明」印象。` },
   ],
   journey: {
-    intro: `CROSSBORDERS 从民泊运营起步。以现场积累的运营实绩为根基，如今专注于跨境不动产的资产价值创造。`,
+    intro: `以民宿运营积累的现场实力为基础，迈向无人酒店运营；并通过取得宅建业执照，进化为可自社完成购入〜运营〜出售全流程的体制。`,
+    subEn: 'From vacation-rental to staffless hotels & full-cycle real estate',
     milestones: [
-      { year: '2014', title: `民泊（住宿）运营事业起步` },
-      { year: '2016', title: `株式会社 CROSSBORDERS 成立；麻布十番一栋物件运营开始` },
-      { year: '2018', title: `拓展贷し空间（会议·活动空间）事业` },
-      { year: '2025', title: `取得日本「宅地建物取引业」登录（不动产交易牌照）` },
-      { year: '2026', title: `品牌焕新，聚焦跨境不动产资产价值创造` },
+      { year: '2014', title: `开始民宿运营` },
+      { year: '2016', title: `公司成立
+麻布十番开始运营` },
+      { year: '2018', title: `开始共享空间
+(会议·活动)事业` },
+      { year: '2024', title: `无人酒店开业
+文京区·老楼再生`, hot: true },
+      { year: '2025', title: `取得宅建业登录
+全流程自社完结` },
+      { year: '2026', title: `江东区无人酒店开业
+品牌焕新·跨境不动产`, hot: true },
     ],
     closing: `多年的民宿运营经验让我们懂得：无论是多么不同的物件，我们都能把它的价值最大化。`,
   },
@@ -544,7 +565,7 @@ const zh = {
     valueTeaserTitle: `资产生命周期的全程价值管理`, valueTeaserSubtitle: `从 Discover 到 Exit，我们陪伴客户走完每一步——这就是「Cross the Borders」在业务层面的真正含义。`, valueTeaserLink: `查看完整价值链 →`,
     homeCtaTitle: `跟我们一起，跨越边界，迈向未来`, homeCtaSubtitle: `无论您是土地业主、投资人，还是正在考虑合作的伙伴，欢迎随时与我们联系。`, homeCtaButton: `联系我们`,
     aboutEyebrow1: `01 · 品牌哲学`, aboutTitle1: `CROSSBORDERS 的含义`, aboutIntro1: `"Cross the Borders" ——跨越边界，创造新的价值。\n我们的公司名不仅是名称，更是一种坚定的理念。我们认为，如今的日本不动产行业，依然被五道无形的「边界」所阻隔。`,
-    aboutEyebrow2: `02 · 我们的历程`, aboutTitle2: `CROSSBORDERS 一路走来`,
+    aboutEyebrow2: `02 · OUR JOURNEY`, aboutTitle2: `我们的历程 — 从民宿、到无人酒店、再到不动产全流程`,
     valueEyebrow: `03 · 我们如何创造价值`, valueTitle: `资产生命周期的全程价值管理`, valueIntro: `传统不动产公司只做「买卖中介」。我们把所有服务整合成一条完整的价值链，而不是零散的服务项目。`,
     matrixTitle: `我们的差别化`, matrixSubtitle: `市场上不乏各类公司，但能把不动产、运营、咨询三者结合的，极少。`, matrixCapHeader: `能力`,
     strengthsTitle: `四大核心强项`, valueCtaButton: `洽谈合作`,
@@ -573,7 +594,7 @@ const en = {
     taglineEn: ``,
     email: 'contact@crossborders.tokyo',
     phone: '050-1722-7286',
-    address: 'Meguro-ku, Tokyo, Japan',
+    address: '4-41-8-2F Kamimeguro, Meguro-ku, Tokyo 153-0051',
   },
   nav: [
     { label: `Home`, to: '/' },
@@ -636,13 +657,21 @@ const en = {
     { key: 'industry', title: `The industry border`, body: `Through radically transparent, straightforward dealing, we break the industry's old "opaque" reputation.` },
   ],
   journey: {
-    intro: `CROSSBORDERS started out running vacation rentals. Built on that hands-on operating experience, we now focus on cross-border real-estate value creation.`,
+    intro: `Built on hands-on vacation-rental operations, we moved into staffless hotels — and with a real-estate brokerage license, we now handle the full cycle from purchase to operation to sale in-house.`,
+    subEn: 'From vacation-rental to staffless hotels & full-cycle real estate',
     milestones: [
-      { year: '2014', title: `Vacation-rental operations begin` },
-      { year: '2016', title: `CROSSBORDERS CO., LTD. founded; begins operating an entire building in Azabu-Juban` },
-      { year: '2018', title: `Expands into rental meeting & event spaces` },
-      { year: '2025', title: `Obtains a Japanese real-estate brokerage license` },
-      { year: '2026', title: `Rebrands to focus on cross-border real-estate value creation` },
+      { year: '2014', title: `Vacation-rental
+operations begin` },
+      { year: '2016', title: `Company founded
+Operations begin in Azabu-Juban` },
+      { year: '2018', title: `Rental-space
+business begins` },
+      { year: '2024', title: `Staffless hotel opens
+Bunkyo · renovated building`, hot: true },
+      { year: '2025', title: `Brokerage license obtained
+Full cycle in-house` },
+      { year: '2026', title: `Second staffless hotel in Koto
+Rebrand · cross-border real estate`, hot: true },
     ],
     closing: `Years of vacation-rental operations taught us one thing:\nhowever different a property may be, we can maximize its value.`,
   },
@@ -727,7 +756,7 @@ const en = {
     valueTeaserTitle: `Value management across the asset lifecycle`, valueTeaserSubtitle: `From Discover to Exit, we accompany clients every step — this is what "Cross the Borders" truly means in business.`, valueTeaserLink: `See the full value chain →`,
     homeCtaTitle: `Together, toward new borders`, homeCtaSubtitle: `Whether you're a landowner, an investor, or considering a partnership, feel free to reach out anytime.`, homeCtaButton: `Get in touch`,
     aboutEyebrow1: `01 · Brand philosophy`, aboutTitle1: `What CROSSBORDERS means`, aboutIntro1: `"Cross the Borders" — go beyond boundaries, create new value.\nMore than a name, it is the philosophy we work by.\nWe believe Japan's real-estate industry is, even today, divided by five invisible "borders."`,
-    aboutEyebrow2: `02 · Our journey`, aboutTitle2: `The CROSSBORDERS story`,
+    aboutEyebrow2: `02 · OUR JOURNEY`, aboutTitle2: `Our journey — vacation rentals, staffless hotels, full-cycle real estate`,
     valueEyebrow: `03 · How we create value`, valueTitle: `Value management across the asset lifecycle`, valueIntro: `A traditional agency only handles brokerage. We bring every service together into one continuous value chain — not a set of disconnected offerings.`,
     matrixTitle: `How we differ`, matrixSubtitle: `There are plenty of agencies, operators and consultancies — but very few combine all three.`, matrixCapHeader: `Capability`,
     strengthsTitle: `Four core strengths`, valueCtaButton: `Discuss your needs`,

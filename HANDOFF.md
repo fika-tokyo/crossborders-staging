@@ -61,8 +61,12 @@ git add -A && git commit -m "..." && git push
 - **/value** 価値創造: 追従する目次（TOC）→ 価値創造の流れ + 差別化マトリクス + 四つの強み + FAQ
 - **/works** 実績: 日本地図（地域マーカー、クリックで各地域の詳細へ）。「不動産成約事例」/「ホテル運営実績」の2タブ切替。
 - **/works/:region** 地域詳細: 東京は23区の放射図（区ごとに代表地標の写真へ線が発散）+ 事例カード。他地域は事例カード。
-- **/partnership** 協働: 哲学 + 3つの協働
-- **/contact** お問い合わせ: 入力検証つきフォーム → /thank-you
+- **/insights** 市場レポート: 記事一覧。**/insights/:slug** で記事詳細(markdown を
+  react-markdown+remark-gfm+rehype-raw で描画。CJK 対応のため太字は `<strong>` タグ)。
+  記事データは `src/insights/index.js` の ARTICLES(正文は同ディレクトリの .md を ?raw import)。
+  〈ご記入ください〉プレースホルダは業主記入待ち・削除禁止。成約時は status を 'sold' に。
+- **/partnership** は /contact へリダイレクト(協働カードは Contact に統合済み)
+- **/contact** お問い合わせ: 協働カード(クリックで主題預選+スクロール)+ 入力検証つきフォーム → /thank-you
 - フッター: CTA バナー + 連絡先（海の写真背景。/contact・/thank-you では CTA 非表示）
 
 ## まだ未対応（要・実データ。捏造禁止）/ 待补充（真实素材，禁止编造）

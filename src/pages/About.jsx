@@ -51,16 +51,33 @@ export default function About() {
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink md:text-4xl">
             {ui.aboutTitle2}
           </h2>
+          {journey.subEn && (
+            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-ink-soft">{journey.subEn}</p>
+          )}
           <p className="mt-4 text-ink-soft">{journey.intro}</p>
 
-          {/* Timeline */}
-          <ol className="mt-10 space-y-5 border-l border-line pl-6">
+          {/* Timeline — horizontal on desktop */}
+          <div className="relative mt-12 hidden md:block">
+            <div className="absolute left-0 right-0 top-[42px] h-0.5 bg-line" />
+            <ol className="relative flex">
+              {journey.milestones.map((m) => (
+                <li key={m.year} className="flex-1 px-2 text-center">
+                  <p className={`text-lg font-bold ${m.hot ? 'text-red-dark' : 'text-navy'}`}>{m.year}</p>
+                  <span className={`mx-auto mt-2 block h-3.5 w-3.5 rounded-full ring-4 ring-mist ${m.hot ? 'bg-red' : 'bg-navy'}`} />
+                  <p className="mt-3 whitespace-pre-line text-xs leading-relaxed text-ink-soft">{m.title}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* Timeline — vertical on mobile */}
+          <ol className="mt-10 space-y-5 border-l border-line pl-6 md:hidden">
             {journey.milestones.map((m) => (
               <li key={m.year} className="relative">
-                <span className="absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full bg-red ring-4 ring-mist" />
+                <span className={`absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full ring-4 ring-mist ${m.hot ? 'bg-red' : 'bg-navy'}`} />
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4">
-                  <span className="shrink-0 text-lg font-bold text-red-dark">{m.year}</span>
-                  <span className="text-ink-soft">{m.title}</span>
+                  <span className={`shrink-0 text-lg font-bold ${m.hot ? 'text-red-dark' : 'text-navy'}`}>{m.year}</span>
+                  <span className="whitespace-pre-line text-ink-soft">{m.title}</span>
                 </div>
               </li>
             ))}
