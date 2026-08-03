@@ -6,7 +6,7 @@ CROSSBORDERS CO., LTD. / July 2026
 
 We operate our own hotels in the Shinjuku-sanchome area, so we have a first-hand feel for this market's daily room rates and occupancy. When a whole building a few minutes' walk away came up for sale, we ran the numbers straight away.
 
-It is an apartment building currently operated as minpaku (private lodging): reinforced-concrete, six storeys, 14 rooms, of which 13 are already registered under the Private Lodging Business Act. It sits in a commercial zone, four minutes' walk from Shinjuku-sanchome Station, with a certificate of final inspection.
+It is an apartment building currently operated as minpaku (private lodging): reinforced-concrete, six stories, 14 rooms, of which 13 are already registered under the Private Lodging Business Act. It sits in a commercial zone, four minutes' walk from Shinjuku-sanchome Station, with a certificate of final inspection.
 
 The conclusion of the simulation, up front:
 
@@ -53,7 +53,7 @@ For owners of minpaku properties, this means: **the certainty of a "minpaku lice
 
 ## Event three: demand — volume is correcting, prices are rising
 
-On the demand side, we want to show the full picture, including the unfavourable parts.
+On the demand side, we want to show the full picture, including the unfavorable parts.
 
 **Volume: correcting, driven mainly by a single market.** Inbound visitors totalled 21.08 million in the first half of 2026, down 2.0% year on year — the first negative first half in five years. June alone was down 6.8%, driven overwhelmingly by the China market (June: **−57.3%** year on year). Yet in the same June, South Korea sent 787,000 visitors (+7.8%), Taiwan 670,000 (+14.6%), the US 355,000 (+2.7%) and Hong Kong 214,000 (+28.5%) — **fifteen markets set all-time records for June** (source: JNTO visitor arrivals, June 2026 estimates).
 
@@ -61,7 +61,7 @@ On the demand side, we want to show the full picture, including the unfavourable
 
 Falling volume and rising prices — why is that not a contradiction? **Precisely because new supply is locked out by construction costs (event one), ADR can keep climbing even while visitor numbers correct. "Lower volume, higher price" is not a temporary quirk; it is the structural result of supply contraction.**
 
-A market like this punishes overpriced assets, and relatively favours assets with headroom in room rates and no dependence on a single source market. This building's operating plan is set accordingly: **it does not assume a recovery in Chinese demand**, targeting instead South Korea, Taiwan, Europe/North America and Southeast Asia.
+A market like this punishes overpriced assets, and relatively favors assets with headroom in room rates and no dependence on a single source market. This building's operating plan is set accordingly: **it does not assume a recovery in Chinese demand**, targeting instead South Korea, Taiwan, Europe/North America and Southeast Asia.
 
 ## So: this building's numbers
 
@@ -75,7 +75,7 @@ Supply contraction, a regulatory turn, and demand splitting between volume and p
 
 Between these three rows, the location does not change, the room count does not change, and demand does not change. Only one thing differs: the type of operating license. The minpaku law caps operation at 180 days a year — for more than half the year, these 14 fitted-out, guest-ready rooms must legally sit empty. Switch the minpaku registration to a hotel business (simple lodging) license, and that cap disappears.
 
-**The obvious question: why doesn't the seller obtain the license and then sell?** Because licensing and 365-day operation form a chain of work that requires specialist capability — compliance surveys under the Hotel Business Act, Fire Service Act and Building Standards Act; prior consultations with the public health centre and fire department; change of use and license application; then revenue management and multilingual operation after opening. None of this is the seller's core business, so the building is priced for sale as minpaku, as is. In other words, **the income gap between the two formats is not a market oversight — it is the price of that chain of capability itself.** That chain happens to be our business: we operate our own hotel in the same trading area, and every operating assumption in this article can be checked against our own property's actual data.
+**The obvious question: why doesn't the seller obtain the license and then sell?** Because licensing and 365-day operation form a chain of work that requires specialist capability — compliance surveys under the Hotel Business Act, Fire Service Act and Building Standards Act; prior consultations with the public health center and fire department; change of use and license application; then revenue management and multilingual operation after opening. None of this is the seller's core business, so the building is priced for sale as minpaku, as is. In other words, **the income gap between the two formats is not a market oversight — it is the price of that chain of capability itself.** That chain happens to be our business: we operate our own hotel in the same trading area, and every operating assumption in this article can be checked against our own property's actual data.
 
 Look also at how the valuation breaks down. Working back from replacement cost, about 84% of this building's total price corresponds to the commercial land in Shinjuku 5-chome; the building accounts for only about 16%. **Rebuilding that 16% (about ¥112M) from scratch today would cost about ¥200M in construction alone (versus about ¥90M in 2012) — and with core components such as unit bathrooms supply-constrained, even the construction schedule would be hard to pin down.**
 
@@ -89,13 +89,13 @@ The summary below is published with the permission of the seller and the broker.
 |---|---|---|---|
 | Location | Shinjuku 5-chome, Shinjuku-ku, Tokyo 〈lot number to be filled in〉 | Land area | 148.75㎡ |
 | Access | 4 min walk from Shinjuku-sanchome Sta. (Fukutoshin / Toei Shinjuku lines); 8 min walk from Shinjuku-gyoemmae Sta. (Marunouchi line) | Building area | 414.98㎡ |
-| Zoning | Commercial | Structure / scale | RC, 6 storeys |
+| Zoning | Commercial | Structure / scale | RC, 6 stories |
 | Coverage / FAR | 80% / 600% | Built | May 2005 |
 | Layout | 1R–1DK (c. 18㎡ × 12 rooms; c. 26㎡ × 2 rooms) | Final inspection certificate | Yes |
 | Current status | 14 residential units + 1 shop. 13 rooms registered as minpaku, to be delivered vacant; shop and parking currently leased | Price | ¥698,000,000 (tax included) |
 | Transaction type | 〈brokerage / seller — to be filled in〉 | Information released | 〈to be filled in〉 |
 
-*Next scheduled update: 〈to be filled in〉. A hotel business (simple lodging) license enables 365-day operation only after it is obtained; whether and how quickly it can be obtained depends on the judgment of the local public health centre, fire department and building authority. Conversion works and licensing incur separate costs.*
+*Next scheduled update: 〈to be filled in〉. A hotel business (simple lodging) license enables 365-day operation only after it is obtained; whether and how quickly it can be obtained depends on the judgment of the local public health center, fire department and building authority. Conversion works and licensing incur separate costs.*
 
 ## What we do
 

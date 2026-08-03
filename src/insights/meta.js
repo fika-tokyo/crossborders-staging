@@ -24,7 +24,7 @@ export const ARTICLES_META = [
       ja: '新宿三丁目駅徒歩4分・RC造6階建ての一棟ビル。同じ建物で、民泊180日営業と旅館業365日営業では収益率が約2倍違う——その理由を、供給・制度・需要の3つのデータから読み解きます。',
       tw: '新宿三丁目站步行4分、RC造6層的一棟整樓。同一棟建築，民泊180天營業與旅館業365天營業，收益率相差近一倍——本文用供給、制度、需求三組數據解讀原因。',
       zh: '新宿三丁目站步行4分、RC造6层的一栋整楼。同一栋建筑，民泊180天营业与旅馆业365天营业，收益率相差近一倍——本文用供给、制度、需求三组数据解读原因。',
-      en: 'A six-storey RC building four minutes\' walk from Shinjuku-sanchome Station. In the same building, 180-day minpaku operation and 365-day hotel-license operation differ in yield by nearly 2x — we unpack why, through data on supply, regulation and demand.',
+      en: 'A six-story RC building four minutes\' walk from Shinjuku-sanchome Station. In the same building, 180-day minpaku operation and 365-day hotel-license operation differ in yield by nearly 2x — we unpack why, through data on supply, regulation and demand.',
     },
   },
 ]
