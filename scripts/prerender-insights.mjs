@@ -65,10 +65,10 @@ for (const a of ARTICLES_META) {
 // ---- 一覧ページ ----
 renderPage({
   path: '/insights',
-  title: 'レポート | CROSSBORDERS',
+  title: '物件分析 | CROSSBORDERS',
   description: '株式会社クロスボーダーズによる物件分析・市場レポート。',
   bodyHtml:
-    '<h1 class="text-3xl font-bold">レポート</h1><ul class="mt-6 list-disc pl-6">' +
+    '<h1 class="text-3xl font-bold">物件分析</h1><ul class="mt-6 list-disc pl-6">' +
     ARTICLES_META.map(
       (a) => `<li><a href="/insights/${a.slug}/">${esc(a.title.ja)}</a>(${a.date})</li>`
     ).join('') +
