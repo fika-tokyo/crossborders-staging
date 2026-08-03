@@ -32,7 +32,7 @@ const ja = {
     { label: `私たちについて`, to: '/about' },
     { label: `価値創造`, to: '/value' },
     { label: `実績`, to: '/works' },
-    { label: `物件分析`, to: '/insights' },
+    { label: `コラム`, to: '/insights' },
     { label: `お問い合わせ`, to: '/contact' },
   ],
   works: {
@@ -50,7 +50,7 @@ const ja = {
   },
   insights: {
     eyebrow: 'INSIGHTS',
-    listTitle: `物件分析`,
+    listTitle: `コラム`,
     listSubtitle: `実際の物件を題材に、データに基づく市場分析と収益シミュレーションを公開しています。`,
     back: `← 一覧に戻る`,
     statusAvailable: `販売中`,
@@ -62,7 +62,7 @@ const ja = {
     ctaLead: `本物件のご検討・詳細資料のご請求、または類似物件のご相談はこちらから。`,
     ctaButton: `お問い合わせ・資料請求`,
     notFound: `記事が見つかりません`,
-    latestTitle: `最新の物件分析`,
+    latestTitle: `最新コラム`,
     worksLink: `個別物件の分析記事はこちら →`,
   },
   hero: {
